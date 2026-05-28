@@ -1,0 +1,191 @@
+<!doctype html>
+<html lang="cs">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex, nofollow, noarchive" />
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤</text></svg>" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+    <title>Pro tebe</title>
+    <style>
+      @media (max-width: 768px) {
+        #mobile-gate {
+          display: flex !important;
+        }
+        #app,
+        #falling-bg,
+        #gate,
+        #btn-no {
+          display: none !important;
+          visibility: hidden !important;
+        }
+      }
+    </style>
+    <script type="module" crossorigin src="/x7m3-kp92-qv8/assets/index-D0d8wwOU.js"></script>
+    <link rel="stylesheet" crossorigin href="/x7m3-kp92-qv8/assets/index-4MRR3j81.css">
+  </head>
+  <body>
+    <div id="mobile-gate" class="mobile-gate">
+      <p class="mobile-gate__text">Nikol prosím otevři si to na počítači</p>
+    </div>
+
+    <div id="gate" class="gate hidden">
+      <p>Tady nic není.</p>
+    </div>
+
+    <div id="falling-bg" class="falling-bg hidden" aria-hidden="true"></div>
+
+    <main id="app" class="app hidden">
+
+      <!-- Krok 1 -->
+      <section class="step active" data-step="1">
+        <div class="card">
+          <p class="emoji-top">👋</p>
+          <h1>Ahooj, Nikol trošičku mi chybíš, ale jen 🤏</h1>
+          <p class="lead">Tak tě chci pozvat na rande. Co ty na to?</p>
+          <div class="btn-row btn-row--invite">
+            <button type="button" class="btn btn--yes" id="btn-yes">
+              Když jinak nedáš 🙄
+            </button>
+            <button type="button" class="btn btn--no" id="btn-no" tabindex="-1">Ne, rozhodně ne 😡</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Krok 2 -->
+      <section class="step" data-step="2">
+        <div class="card">
+          <p class="emoji-top">😅</p>
+          <h1>Ufff 😮‍💨, dlouho si váhala</h1>
+          <p class="lead">
+            A já si fakt myslel, že dáš fakt to ne..
+          </p>
+          <button type="button" class="btn btn--primary" id="btn-fakt-jo">Fakt jo?</button>
+        </div>
+      </section>
+
+      <!-- Krok 3 -->
+      <section class="step" data-step="3">
+        <div class="card card--wide">
+          <p class="emoji-top">📅</p>
+          <h1>A kdy jsi volná?</h1>
+          <div class="field">
+            <label for="date-input">Vyber datum</label>
+            <input type="date" id="date-input" min="2026-06-05" required />
+          </div>
+          <p class="field-label">A v kolik?</p>
+          <div class="time-grid" id="time-grid">
+            <label class="time-card">
+              <input type="radio" name="time" value="17:30" />
+              <div class="time-card__inner">
+                <span class="time-card__time">17:30</span>
+                <span class="time-card__hint">Okey, to se snad stihnu ještě otočit domů a vysprchovat se..</span>
+              </div>
+            </label>
+            <label class="time-card">
+              <input type="radio" name="time" value="18:00" />
+              <div class="time-card__inner">
+                <span class="time-card__time">18:00</span>
+                <span class="time-card__hint">Ideální čas, to už budeš mít hlad určitě i ty.</span>
+              </div>
+            </label>
+            <label class="time-card">
+              <input type="radio" name="time" value="19:00" />
+              <div class="time-card__inner">
+                <span class="time-card__time">19:00</span>
+                <span class="time-card__hint">To už budu mít fakt velkej hlad, ale to dám.</span>
+              </div>
+            </label>
+            <label class="time-card">
+              <input type="radio" name="time" value="20:00" />
+              <div class="time-card__inner">
+                <span class="time-card__time">20:00</span>
+                <span class="time-card__hint">Jakože ani ty nechceš jíst tak pozdě.. (ani já).</span>
+              </div>
+            </label>
+          </div>
+          <button type="button" class="btn btn--primary" id="btn-continue-date" disabled>Pokračovat</button>
+        </div>
+      </section>
+
+      <!-- Krok 4 -->
+      <section class="step" data-step="4">
+        <div class="card card--wide">
+          <p class="emoji-top">🍽️</p>
+          <h1>Co by ti chutnalo?</h1>
+          <p class="lead lead--small">Vyber si jednu možnost — nebo to nech na mně.</p>
+          <div class="food-grid" id="food-grid">
+            <label class="food-card">
+              <input type="radio" name="food" value="Pizza" />
+              <span>🍕 Pizza</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Těstoviny" />
+              <span>🍝 Těstoviny</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Burger" />
+              <span>🍔 Burger</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Sushi" />
+              <span>🍣 Sushi</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Steak / maso" />
+              <span>🥩 Steak / maso</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Mexiko / tacos" />
+              <span>🌮 Mexiko / tacos</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Salát" />
+              <span>🥗 Salát (když chceš být zdravě :D)</span>
+            </label>
+            <label class="food-card">
+              <input type="radio" name="food" value="Asijská kuchyně" />
+              <span>🥡 Asijská kuchyně</span>
+            </label>
+            <label class="food-card food-card--wide">
+              <input type="radio" name="food" value="Nechám to na tobě" />
+              <span>✨ Nechám to na tobě (ať dlouho nevybíráš, znáš se :D)</span>
+            </label>
+            <label class="food-card food-card--wide">
+              <input type="radio" name="food" value="__custom__" />
+              <span>🤷 Ani jedno se mi nelíbí</span>
+            </label>
+          </div>
+          <div class="field food-custom hidden" id="food-custom-wrap">
+            <label for="food-custom-input">Tak co by ti chutnalo?</label>
+            <input
+              type="text"
+              id="food-custom-input"
+              placeholder="Napiš, na co máš chuť…"
+              maxlength="200"
+            />
+          </div>
+          <p class="form-error hidden" id="form-error">Něco se pokazilo s odesláním — zkus to prosím znovu.</p>
+          <button type="button" class="btn btn--primary" id="btn-confirm-food" disabled>Potvrdit</button>
+        </div>
+      </section>
+
+      <!-- Krok 5 -->
+      <section class="step" data-step="5">
+        <div class="card">
+          <p class="emoji-top">🥳</p>
+          <h1>JOOOOOOOOO</h1>
+          <p class="lead">
+            Fakt jsem se bál, že dáš ne.
+          </p>
+          <p class="summary" id="summary-pickup"></p>
+          <p class="lead">Těším se na tebe! :)</p>
+          <p class="signature">Filip</p>
+        </div>
+      </section>
+    </main>
+
+  </body>
+</html>
